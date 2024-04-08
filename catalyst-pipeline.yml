@@ -8,13 +8,15 @@ images:
   hub-image:
     image: node:16
     auth:
-      username: thangaram611
-      password: Catalyst@1
+      username: akshay28082001
+      password: podaloose
 jobs:
   catalyst:
     image: hub-image
     steps:
-      - echo "Hello"
+      - ls
+      - pwd
+      - cd
   zoho:
     image: hub-image
     steps:
