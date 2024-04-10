@@ -30,11 +30,7 @@ jobs:
           location: stratus://gitbucket/gitpath
           file: /catalyst/pom.xml
     steps:
-      - >-
-        node -e "const delay = (ms) => new Promise(resolve =>
-        setTimeout(resolve, ms)); const printNumbers = async () => { for (let i
-        = 1; i <= 50; i++) { console.log(i); await delay(100); } };
-        printNumbers();"
+      - ls -a
   approve:
     type: approval
     specification:
@@ -56,7 +52,7 @@ stages:
     runner: runner2
     jobs:
       - catalyst
-      - test1
+      - test
       - zoho
   - name: logs
     runner: runner2
