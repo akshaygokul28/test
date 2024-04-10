@@ -9,7 +9,7 @@ images:
     image: ollama/ollama
     auth:
       username: akshay28082001
-      password: podaloose
+      password: Groot@9952
 jobs:
   catalyst:
     image: hub-image
