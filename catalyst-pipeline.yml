@@ -44,10 +44,10 @@ stages:
     runner: runner2
     jobs:
       - catalyst
+      - test
       - zoho
   - name: logs
     runner: runner2
     jobs:
       - approve
-      - test
 pipeline-runner: runner1
