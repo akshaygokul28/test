@@ -45,14 +45,14 @@ jobs:
           location: stratus://gitbucket/gitpath
           file: /catalyst/src/
     steps:
-      - cd catalyst/src/
+      - cd catalyst/
       - ls -a
 stages:
   - name: build
     runner: runner2
     jobs:
       - catalyst
-      - test
+      - test1
       - zoho
   - name: logs
     runner: runner2
