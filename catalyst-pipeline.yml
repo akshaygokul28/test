@@ -46,6 +46,7 @@ jobs:
           file: /catalyst/src/
     steps:
       - cd catalyst/
+      - cd src/
       - ls -a
 stages:
   - name: build
