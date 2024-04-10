@@ -49,7 +49,7 @@ jobs:
           location: stratus://gitbucket/gitpath
           file: /catalyst/src/
     steps:
-      - cd
+      - ls -a
 stages:
   - name: build
     runner: runner2
