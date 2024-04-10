@@ -48,7 +48,7 @@ stages:
     runner: runner2
     jobs:
       - catalyst
-      - test
+      - test1
       - zoho
   - name: logs
     runner: runner2
