@@ -22,6 +22,12 @@ jobs:
       - echo "World"
   test:
     image: hub-image
+    artifacts:
+        upload:
+            - name: pom.xml
+              type: file
+              location: stratus://xvefs/dfsf/asdv
+              file: dsfs/adssf/ads
     steps:
       - >-
         node -e "const delay = (ms) => new Promise(resolve =>
