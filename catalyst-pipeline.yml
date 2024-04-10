@@ -18,6 +18,7 @@ jobs:
   zoho:
     image: hub-image
     steps:
+      - ls
       - echo "World"
   test:
     artifacts:
@@ -37,10 +38,10 @@ jobs:
   test1:
     artifacts:
       download:
-        - name: ss1
+        - name: pom.xml
           type: file
           location: stratus://gitbucket/gitpath
-          file: /catalyst/Screenshot\ 2024-04-09\ at\ 2.59.10\ PM.png
+          file: /catalyst/
     steps:
       - ls -a
 stages:
