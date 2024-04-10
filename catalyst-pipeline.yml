@@ -45,6 +45,7 @@ jobs:
     artifacts:
       download:
         - name: pom.xml
+          type: file
           location: stratus://gitbucket/gitpath
           file: /catalyst/src/
     steps:
