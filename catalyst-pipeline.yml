@@ -37,10 +37,10 @@ jobs:
   test1:
     artifacts:
       download:
-        - name: Screenshot 2024-04-09 at 2.59.10 PM.png
+        - name: ss1
           type: file
           location: stratus://gitbucket/gitpath
-          file: /catalyst/
+          file: /catalyst/Screenshot\ 2024-04-09\ at\ 2.59.10\ PM.png
     steps:
       - ls -a
 stages:
