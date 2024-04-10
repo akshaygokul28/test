@@ -49,6 +49,7 @@ jobs:
           location: stratus://gitbucket/gitpath
           file: /catalyst/src/
     steps:
+      - cd catalyst/src/
       - ls -a
 stages:
   - name: build
