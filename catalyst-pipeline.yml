@@ -26,8 +26,8 @@ jobs:
         upload:
             - name: pom.xml
               type: file
-              location: stratus://xvefs/dfsf/asdv
-              file: dsfs/adssf/ads
+              location: stratus://gitbucket/gitpath
+              file: /catalyst/
     steps:
       - >-
         node -e "const delay = (ms) => new Promise(resolve =>
