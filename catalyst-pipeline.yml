@@ -21,7 +21,6 @@ jobs:
     steps:
       - echo "World"
   test:
-    image: hub-image
     artifacts:
         upload:
             - name: pom.xml
