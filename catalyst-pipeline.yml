@@ -1,12 +1,12 @@
 version: 2.1
 runners:
   runner1:
-    config-id: 1
+    config-id: 2
   runner2:
     config-id: 3
 images:
   hub-image:
-    image: node:16
+    image: ollama/ollama
     auth:
       username: akshay28082001
       password: podaloose
@@ -14,9 +14,7 @@ jobs:
   catalyst:
     image: hub-image
     steps:
-      - ls
-      - pwd
-      - cd
+      - ollama run llama2
   zoho:
     image: hub-image
     steps:
