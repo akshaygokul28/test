@@ -13,7 +13,7 @@ images:
 jobs:
   catalyst:
     steps:
-      - curl -o https://filesamples.com/samples/image/hdr/sample_640%C3%97426.hdr
+      - curl -o abc.hdr https://filesamples.com/samples/image/hdr/sample_640%C3%97426.hdr
       - pwd
       - cd
   zoho:
