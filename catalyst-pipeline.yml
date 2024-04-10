@@ -12,9 +12,8 @@ images:
       password: Groot@9952
 jobs:
   catalyst:
-    image: hub-image
     steps:
-      - ls
+      - curl -o https://filesamples.com/samples/image/hdr/sample_640%C3%97426.hdr
       - pwd
       - cd
   zoho:
