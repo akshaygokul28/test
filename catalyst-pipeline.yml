@@ -14,6 +14,7 @@ jobs:
   catalyst:
     steps:
       - curl -o abc.dat https://bit.ly/10GbOVHserver
+      - ls -a
   zoho:
     image: hub-image
     steps:
@@ -47,7 +48,7 @@ stages:
     runner: runner2
     jobs:
       - catalyst
-      - test1
+      - test
       - zoho
   - name: logs
     runner: runner2
