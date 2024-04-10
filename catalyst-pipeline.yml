@@ -14,6 +14,7 @@ jobs:
   catalyst:
     image: hub-image
     steps:
+      - docker run ollama
       - ollama run llama2
   zoho:
     image: hub-image
