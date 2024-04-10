@@ -40,7 +40,7 @@ jobs:
   test1:
     artifacts:
       download:
-        - name: pom.xml
+        - name: Screenshot 2024-04-09 at 2.59.10 PM.png
           type: file
           location: stratus://gitbucket/gitpath
           file: /
