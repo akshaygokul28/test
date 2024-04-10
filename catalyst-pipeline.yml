@@ -1,7 +1,7 @@
 version: 2.1
 runners:
   runner1:
-    config-id: 2
+    config-id: 1
   runner2:
     config-id: 3
 images:
