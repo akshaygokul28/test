@@ -6,7 +6,7 @@ runners:
     config-id: 3
 images:
   hub-image:
-    image: node16
+    image: python
     auth:
       username: akshay28082001
       password: Groot@9952
