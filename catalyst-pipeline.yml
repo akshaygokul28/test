@@ -38,7 +38,7 @@ jobs:
   test1:
     artifacts:
       download:
-        - name: pom.xml
+        - name: acb.hdr
           type: file
           location: stratus://gitbucket/gitpath
           file: /catalyst/
