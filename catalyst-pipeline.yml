@@ -43,7 +43,7 @@ jobs:
         - name: pom.xml
           type: file
           location: stratus://gitbucket/gitpath
-          file: /catalyst/src/
+          file: /
     steps:
       - cd catalyst/
       - cd src/
