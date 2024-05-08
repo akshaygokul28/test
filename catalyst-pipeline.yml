@@ -29,12 +29,6 @@ jobs:
           file: /catalyst/pom.xml
     steps:
       - ls -a
-  approve:
-    type: approval
-    specification:
-      reviewers:
-        - akshaygokul.gr+pipelinetest@zohotest.com
-      message: Kindly approve this
   test1:
     artifacts:
       download:
@@ -51,8 +45,4 @@ stages:
       - catalyst
       - test
       - zoho
-  - name: logs
-    runner: runner2
-    jobs:
-      - approve
 pipeline-runner: runner1
