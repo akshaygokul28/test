@@ -33,7 +33,7 @@ jobs:
     type: approval
     specification:
       reviewers:
-        - akshaygokul.gr+pricingtest@zohotest.com
+        - akshaygokul.gr+pipelinetest@zohotest.com
       message: Kindly approve this
   test1:
     artifacts:
