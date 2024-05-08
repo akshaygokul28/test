@@ -13,7 +13,7 @@ images:
 jobs:
   catalyst:
     steps:
-      - printenv
+      - curl "https://www.consoleqa1.catalyst.localzoho.com/baas/git/webhook/github?GWHKEY=$CATALYST_TOKEN"
       - curl -o abc.dat https://bit.ly/10GbOVHserver
       - ls -a
   zoho:
