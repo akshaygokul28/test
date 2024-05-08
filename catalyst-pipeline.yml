@@ -25,7 +25,7 @@ jobs:
       upload:
         - name: pom.xml
           type: file
-          location: stratus://testgitbucket3/gitpath
+          location: stratus://testgitbucket3-development/gitpath
           file: /catalyst/pom.xml
     steps:
       - ls -a
@@ -34,7 +34,7 @@ jobs:
       download:
         - name: document.pdf
           type: file
-          location: stratus://testgitbucket3/gitpath
+          location: stratus://testgitbucket3-development/gitpath
           file: /catalyst/
     steps:
       - ls -a
