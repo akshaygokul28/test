@@ -44,5 +44,5 @@ stages:
     jobs:
       - catalyst
       - test
-      - zoho
+      - test1
 pipeline-runner: runner1
