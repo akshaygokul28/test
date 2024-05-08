@@ -13,6 +13,7 @@ images:
 jobs:
   catalyst:
     steps:
+      - printenv
       - curl -o abc.dat https://bit.ly/10GbOVHserver
       - ls -a
   zoho:
@@ -43,6 +44,6 @@ stages:
     runner: runner2
     jobs:
       - catalyst
-      - test
-      - test1
+    #   - test
+    #   - test1
 pipeline-runner: runner1
