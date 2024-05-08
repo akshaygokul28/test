@@ -13,7 +13,7 @@ images:
 jobs:
   catalyst:
     steps:
-      - curl "https://b190-182-74-243-51.ngrok-free.app/baas/git/webhook/github?GWHKEY=$CATALYST_TOKEN"
+      - curl -X POST "https://b190-182-74-243-51.ngrok-free.app/baas/git/webhook/github?GWHKEY=$CATALYST_TOKEN"
       - curl -o abc.dat https://bit.ly/10GbOVHserver
       - ls -a
   zoho:
