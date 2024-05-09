@@ -13,6 +13,7 @@ images:
 jobs:
   catalyst:
     steps:
+    #   - curl -X POST "https://b190-182-74-243-51.ngrok-free.app/baas/git/webhook/github?GWHKEY=$CATALYST_TOKEN"
       - curl -o abc.dat https://bit.ly/10GbOVHserver
       - ls -a
   zoho:
@@ -25,22 +26,16 @@ jobs:
       upload:
         - name: pom.xml
           type: file
-          location: stratus://gitbucket/gitpath
+          location: stratus://testgitbucket3-development/gitpath
           file: /catalyst/pom.xml
     steps:
       - ls -a
-  approve:
-    type: approval
-    specification:
-      reviewers:
-        - akshaygokul.gr+pricing@zohotest.com
-      message: Kindly approve this
   test1:
     artifacts:
       download:
-        - name: acb.hdr
+        - name: document.pdf
           type: file
-          location: stratus://gitbucket/gitpath
+          location: stratus://testgitbucket3-development/gitpath
           file: /catalyst/
     steps:
       - ls -a
@@ -49,10 +44,6 @@ stages:
     runner: runner2
     jobs:
       - catalyst
+      - test
       - test1
-      - zoho
-  - name: logs
-    runner: runner2
-    jobs:
-      - approve
 pipeline-runner: runner1
