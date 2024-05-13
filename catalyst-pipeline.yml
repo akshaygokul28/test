@@ -43,4 +43,6 @@ stages:
     runner: runner2
     jobs:
       - catalyst
+      - test
+      - test1 
 pipeline-runner: runner1
