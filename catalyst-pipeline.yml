@@ -19,28 +19,4 @@ jobs:
     image: hub-image
     steps:
       - ls
-      - echo "World"
-  test:
-    artifacts:
-      upload:
-        - name: pom.xml
-          type: file
-          location: stratus://testgitbucket3-development/gitpath
-          file: /catalyst/pom.xml
-    steps:
-      - ls -a
-  test1:
-    artifacts:
-      download:
-        - name: document.pdf
-          type: file
-          location: stratus://testgitbucket3-development/gitpath
-          file: /catalyst/
-    steps:
-      - ls -a
-stages:
-  - name: build
-    runner: runner2
-    jobs:
-      - catalyst
-pipeline-runner: runner1
+
