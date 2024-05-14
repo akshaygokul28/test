@@ -45,4 +45,5 @@ stages:
     runner: runner2
     jobs:
       - test
+      - approve
 pipeline-runner: runner1
