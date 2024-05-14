@@ -44,6 +44,5 @@ stages:
   - name: logs
     runner: runner2
     jobs:
-      - approve
       - test
 pipeline-runner: runner1
