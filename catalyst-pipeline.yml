@@ -43,7 +43,7 @@ jobs:
     type: approval
     specification:
       reviewers:
-        - akshaygokul.gr+lz@zohotest.com
+        - akshaygokul.gr+testpipeline@zohotest.com
       message: Kindly approve this
 stages:
   - name: build
