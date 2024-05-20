@@ -15,8 +15,6 @@ jobs:
     image: hub-image
     steps:
       - ls
-      - pwd
-      - cd
   zoho:
     image: hub-image
     steps:
