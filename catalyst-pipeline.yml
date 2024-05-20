@@ -20,7 +20,7 @@ jobs:
   zoho:
     image: hub-image
     steps:
-      - echo "Hello World"
+      - echo "Hello"
   test:
     image: hub-image
     steps:
