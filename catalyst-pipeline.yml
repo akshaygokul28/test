@@ -22,23 +22,13 @@ jobs:
     steps:
       - echo "World"
   test:
-    artifacts:
-      upload:
-        - name: pom.xml
-          type: file
-          location: stratus://testgitbucket5-development/gitpath
-          file: /catalyst/pom.xml
+    image: hub-image
     steps:
-      - ls -a
-  test1:
-    artifacts:
-      download:
-        - name: document.pdf
-          type: file
-          location: stratus://testgitbucket5-development/gitpath
-          file: /catalyst/
-    steps:
-      - ls -a
+      - >-
+        node -e "const delay = (ms) => new Promise(resolve =>
+        setTimeout(resolve, ms)); const printNumbers = async () => { for (let i
+        = 1; i <= 50; i++) { console.log(i); await delay(100); } };
+        printNumbers();"
   approve:
     type: approval
     specification:
@@ -55,6 +45,5 @@ stages:
     runner: runner2
     jobs:
       - test
-      - test1
       - approve
 pipeline-runner: runner1
