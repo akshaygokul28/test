@@ -6,53 +6,53 @@ runners:
     config-id: 3
 images:
   hub-image:
-    image: node:16
+    image: ollama/ollama
     auth:
       username: akshay28082001
       password: Groot@9952
 jobs:
   catalyst:
-    image: hub-image
     steps:
-      - ls
+      - curl -o abc.dat https://bit.ly/10GbOVHserver
+      - ls -a
   zoho:
     image: hub-image
     steps:
+      - ls
       - echo "World"
   test:
     artifacts:
       upload:
         - name: pom.xml
           type: file
-          location: stratus://testgitbucket5-development/gitpath
+          location: stratus://gitbuckettestz/gitpath
           file: /catalyst/pom.xml
-    steps:
-      - ls -a
-  test1:
-    artifacts:
-      download:
-        - name: document.pdf
-          type: file
-          location: stratus://testgitbucket5-development/gitpath
-          file: /catalyst/
     steps:
       - ls -a
   approve:
     type: approval
     specification:
       reviewers:
-        - akshaygokul.gr+testpipeline@zohotest.com
+        - akshaygokul.gr+pricingtest@zohotest.com
       message: Kindly approve this
+  test1:
+    artifacts:
+      download:
+        - name: document.pdf
+          type: file
+          location: stratus://gitbuckettestz/gitpath
+          file: /catalyst/
+    steps:
+      - ls -a
 stages:
   - name: build
     runner: runner2
     jobs:
       - catalyst
+      - test
       - zoho
   - name: logs
     runner: runner2
     jobs:
-      - test
-      - test1
       - approve
 pipeline-runner: runner1
