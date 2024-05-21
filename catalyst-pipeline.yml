@@ -33,7 +33,7 @@ jobs:
   test1:
     artifacts:
       download:
-        - name: document.pdf
+        - name: auth.zip
           type: file
           location: stratus://gitbuckettestz-development/gitpath
           file: /catalyst/
