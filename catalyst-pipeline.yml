@@ -3,7 +3,7 @@ runners:
   runner1:
     config-id: 2
   runner2:
-    config-id: 3
+    config-id: 1
 images:
   hub-image:
     image: node:16
