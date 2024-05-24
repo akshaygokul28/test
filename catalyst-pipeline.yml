@@ -14,14 +14,14 @@ jobs:
   catalyst:
     image: hub-image
     steps:
-      - ls -a
+      - ls
   zoho:
     image: hub-image
     steps:
       - echo "Hello World"
   test:
-    steps:
     image: hub-image
+    steps:
       - >-
         node -e "const delay = (ms) => new Promise(resolve =>
         setTimeout(resolve, ms)); const printNumbers = async () => { for (let i 
