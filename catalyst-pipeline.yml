@@ -11,7 +11,7 @@ images:
       username: akshay28082001
       password: Groot@9952
 jobs:
-  catalyst:
+  catalystcatalystcatalystcatalystcatalystcatalystcatalystcatalystcatalystcatalyst:
     image: hub-image
     steps:
       - ls
@@ -37,7 +37,7 @@ stages:
   - name: build
     runner: runner2
     jobs:
-      - catalyst
+      - catalystcatalystcatalystcatalystcatalystcatalystcatalystcatalystcatalystcatalyst
       - zoho
   - name: logs
     runner: runner2
