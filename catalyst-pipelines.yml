@@ -5,7 +5,7 @@ runners:
   runner2:
     config-id: 3 
 images:
-  hub-image:
+  hub-image: 
     image: ollama/ollama
     auth:
       username: akshay28082001
