@@ -1,17 +1,57 @@
-version: 1.0
+version: 2.1
+runners:
+  runner1:
+    config-id: 2
+  runner2:
+    config-id: 3
+images:
+  hub-image:
+    image: ollama/ollama
+    auth:
+      username: akshay28082001
+      password: Groot@9952
 jobs:
-  hello:
+  catalyst:
     steps:
-      - echo "Hello"
-  world:
+      - ls -a
+  zoho:
+    image: hub-image
     steps:
+      - ls
       - echo "World"
-  hello-world:
+  test:
+    artifacts:
+      upload:
+        - name: pom.xml
+          type: file
+          location: stratus://gitbuckettestzz/gitpath
+          file: /catalyst/pom.xml
     steps:
-      - echo "Hello World!"
+      - ls -a
+  approve:
+    type: approval
+    specification:
+      reviewers:
+        - akshaygokul.gr+pricingtest@zohotest.com
+      message: Kindly approve this
+  test1:
+    artifacts:
+      download:
+        - name: document.pdf
+          type: file
+          location: stratus://gitbuckettestzz/gitpath
+          file: /catalyst/
+    steps:
+      - ls -a
 stages:
   - name: build
+    runner: runner2
     jobs:
-      - - hello
-        - world
-      - hello-world
+      - catalyst
+      - test
+      - zoho
+  - name: logs
+    runner: runner2
+    jobs:
+      - approve
+pipeline-runner: runner1
