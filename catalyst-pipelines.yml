@@ -24,7 +24,7 @@ jobs:
       upload:
         - name: pom.xml
           type: file
-          location: stratus://gitbuckettestz2/gitpath
+          location: stratus://gitbuckettestz3/gitpath
           file: /catalyst/pom.xml
     steps:
       - ls -a
@@ -39,7 +39,7 @@ jobs:
       download:
         - name: document.pdf
           type: file
-          location: stratus://gitbuckettestz2/gitpath
+          location: stratus://gitbuckettestz3/gitpath
           file: /catalyst/
     steps:
       - ls -a
