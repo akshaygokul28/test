@@ -14,6 +14,7 @@ jobs:
   catalyst:
     steps:
       - ls -a
+      - pwd
   zoho: 
     image: hub-image
     steps:
