@@ -3,9 +3,9 @@ runners:
   runner1:
     config-id: 2
   runner2:
-    config-id: 3
+    config-id: 3 
 images:
-  hub-image:
+  hub-image: 
     image: ollama/ollama
     auth:
       username: akshay28082001
@@ -13,19 +13,18 @@ images:
 jobs:
   catalyst:
     steps:
-      - curl -o abc.dat https://bit.ly/10GbOVHserver
       - ls -a
-  zoho:
+  zoho: 
     image: hub-image
     steps:
       - ls
-      - echo "World"
+      - echo "World!"
   test:
     artifacts:
       upload:
         - name: pom.xml
           type: file
-          location: stratus://gitbuckettestzz/gitpath
+          location: stratus://gitbuckettestz3/gitpath
           file: /catalyst/pom.xml
     steps:
       - ls -a
@@ -33,14 +32,14 @@ jobs:
     type: approval
     specification:
       reviewers:
-        - akshaygokul.gr+pricingtest@zohotest.com
+        -  akshaygokul.gr+testpipeline@zohotest.com
       message: Kindly approve this
   test1:
     artifacts:
       download:
         - name: document.pdf
           type: file
-          location: stratus://gitbuckettestzz/gitpath
+          location: stratus://gitbuckettestz3/gitpath
           file: /catalyst/
     steps:
       - ls -a
@@ -50,7 +49,6 @@ stages:
     jobs:
       - catalyst
       - test
-      - test1
       - zoho
   - name: logs
     runner: runner2
