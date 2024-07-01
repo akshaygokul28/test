@@ -25,7 +25,7 @@ jobs:
         - name: pom.xml
           type: file
           location: stratus://gitbuckettestz4/gitpath
-          file: /catalyst/pom.xml
+          file: pom.xml
     steps:
       - ls -a
   approve:
