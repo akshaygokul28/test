@@ -4,7 +4,7 @@ runners:
     config-id: 2
   runner2:
     config-id: 3 
-images:
+images: 
   hub-image:
     image: ollama/ollama
     auth: 
