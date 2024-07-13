@@ -4,8 +4,8 @@ runners:
     config-id: 2
   runner2:
     config-id: 3 
-images: 
-  hub-image:
+images:
+  hub-image: 
     image: ollama/ollama
     auth:
       username: akshay28082001
@@ -15,11 +15,17 @@ jobs:
     steps:
       - ls -a
   zoho: 
-    image: hub-image 
+    image: hub-image
     steps:
       - ls
       - echo "World!"
   test:
+    artifacts:
+      upload:
+        - name: pom.xml
+          type: file
+          location: stratus://pipelinerelease/gitpath
+          file: /catalyst/pom.xml
     steps:
       - ls -a
   approve:
@@ -29,6 +35,12 @@ jobs:
         -  akshaygokul.gr+pipelinerelease@zohotest.com
       message: Kindly approve this
   test1:
+    artifacts:
+      download:
+        - name: document.pdf
+          type: file
+          location: stratus://pipelinerelease/gitpath
+          file: /catalyst/
     steps:
       - ls -a
 stages:
