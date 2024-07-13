@@ -25,7 +25,7 @@ jobs:
         - name: pom.xml
           type: file
           location: stratus://pipelinerelease/gitpath
-          file: /catalyst/pom.xml
+          file: pom.xml
     steps:
       - ls -a
   approve:
