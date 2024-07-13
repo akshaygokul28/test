@@ -11,9 +11,9 @@ images:
       username: akshay28082001
       password: Groot@9952
 jobs:
-  catalyst:
+  catalyst: 
     steps:
-      - ls -a
+      - pwd
   zoho: 
     image: hub-image
     steps:
@@ -24,22 +24,22 @@ jobs:
       upload:
         - name: pom.xml
           type: file
-          location: stratus://gitbuckettestz3/gitpath
-          file: /catalyst/pom.xml
+          location: stratus://pipelinerelease/gitpath
+          file: pom.xml
     steps:
       - ls -a
   approve:
     type: approval
     specification:
       reviewers:
-        -  akshaygokul.gr+testpipeline@zohotest.com
+        -  akshaygokul.gr+pipelinerelease@zohotest.com
       message: Kindly approve this
   test1:
     artifacts:
       download:
         - name: document.pdf
           type: file
-          location: stratus://gitbuckettestz3/gitpath
+          location: stratus://pipelinerelease/gitpath
           file: /catalyst/
     steps:
       - ls -a
