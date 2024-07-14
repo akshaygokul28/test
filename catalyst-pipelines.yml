@@ -20,12 +20,6 @@ jobs:
       - ls
       - echo "World!"
   test:
-    artifacts:
-      upload:
-        - name: pom.xml
-          type: file
-          location: stratus://pipelinerelease/gitpath
-          file: pom.xml
     steps:
       - ls -a
   approve:
@@ -35,12 +29,6 @@ jobs:
         -  akshaygokul.gr+pipelinerelease@zohotest.com
       message: Kindly approve this
   test1:
-    artifacts:
-      download:
-        - name: document.pdf
-          type: file
-          location: stratus://pipelinerelease/gitpath
-          file: /catalyst/
     steps:
       - ls -a
 stages:
