@@ -16,3 +16,4 @@ jobs:
       - free -h
       - lscpu
       - cat /proc/cpuinfo
+      - lsblk
