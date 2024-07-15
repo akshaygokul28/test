@@ -13,11 +13,7 @@ jobs:
           regex:
             - /catalyst/src/**/
     steps:
-      - free -h
-      - lscpu
-      - cat /proc/cpuinfo
-      - lsblk
-      - df -h
+      - cat /proc/sys/kernel/random/entropy_avail
 runners:
   testrunner:
     config-id: 1
