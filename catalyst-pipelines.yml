@@ -28,6 +28,7 @@ jobs:
         - cd newtest
         - unzip test.zip
         - ls -a
+        - cat src/test/java/com/houarizegai/calculator/CalculatorUITest.java
 runners:
   testrunner:
     config-id: 1
