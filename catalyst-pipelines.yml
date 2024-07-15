@@ -24,6 +24,7 @@ jobs:
           location: stratus://pipelinerelease/gitpath
           file: /newtest/
     steps:
+        - cd newtest
         - pwd
         - ls -a
 runners:
