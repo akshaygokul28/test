@@ -14,7 +14,7 @@ jobs:
             - /catalyst/src/**/
     steps:
       - cat /proc/sys/kernel/random/entropy_avail
-      - apt-get install rng-tools
+      - apt-get install -y rng-tools
       - ls -l /dev/hwrng
 runners:
   testrunner:
