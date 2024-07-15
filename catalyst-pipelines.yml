@@ -20,5 +20,5 @@ jobs:
       - df -h
 runners:
   testrunner:
-    config-id: 3
+    config-id: 2
 pipeline-runner: testrunner
