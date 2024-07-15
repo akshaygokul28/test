@@ -22,7 +22,7 @@ jobs:
         - name: test.zip
           type: file
           location: stratus://pipelinerelease/gitpath
-          file: /catalyst/
+          file: /newtest/
     steps:
         - pwd
         - ls -a
