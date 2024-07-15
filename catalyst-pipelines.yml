@@ -14,7 +14,7 @@ jobs:
             - /catalyst/src/**/
     steps:
       - cat /proc/sys/kernel/random/entropy_avail
-      - ls -l /dev/hwrng
+      - systemctl status rngd
 runners:
   testrunner:
     config-id: 1
