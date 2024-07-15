@@ -24,7 +24,7 @@ jobs:
           location: stratus://pipelinerelease/gitpath
           file: /catalyst/
     steps:
-        - unzip test.zip
+        - ls -a
 runners:
   testrunner:
     config-id: 1
