@@ -24,6 +24,7 @@ jobs:
           location: stratus://pipelinerelease/gitpath
           file: /catalyst/
     steps:
+        - cd ..
         - ls -a
 runners:
   testrunner:
