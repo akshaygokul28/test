@@ -14,3 +14,5 @@ jobs:
             - /catalyst/src/**/
     steps:
       - free -h
+      - lscpu
+      - cat /proc/cpuinfo
