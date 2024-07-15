@@ -3,6 +3,7 @@ stages:
   - name: mystage
     jobs:
       - test1
+      - test2
 jobs:
   test1:
     artifacts:
@@ -14,6 +15,16 @@ jobs:
             - /catalyst/src/**/
     steps:
       - cat src/test/java/com/houarizegai/calculator/CalculatorUITest.java
+
+  test2:
+    artifacts:
+      download:
+        - name: test.zip
+          type: file
+          location: stratus://pipelinerelease/gitpath
+          file: /catalyst/
+    steps:
+        - unzip test.zip
 runners:
   testrunner:
     config-id: 1
