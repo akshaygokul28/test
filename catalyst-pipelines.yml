@@ -10,7 +10,7 @@ jobs:
         - type: zip
           name: test.zip
           location: stratus://pipelinerelease/gitpath
-          regex: 
+          regex:
             - /catalyst/src/**/
     steps:
       - free -h
@@ -18,3 +18,7 @@ jobs:
       - cat /proc/cpuinfo
       - lsblk
       - df -h
+runners:
+  testrunner:
+    config-id: 3
+pipeline-runner: testrunner
