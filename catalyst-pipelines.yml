@@ -13,4 +13,4 @@ jobs:
           regex: 
             - /catalyst/src/**/
     steps:
-      - ls -a
+      - free -h
