@@ -1,35 +1,57 @@
-version: 1
-stages:
-  - name: mystage
-    jobs:
-      - test1
-      - test2
+version: 2.1
+runners: 
+  runner1:
+    config-id: 2
+  runner2:
+    config-id: 3 
+images:  
+  hub-image:
+    image: ollama/ollama
+    auth:
+      username: akshay28082001
+      password: Groot@9952
 jobs:
-  test1:
+  catalyst: 
+    steps:
+      - ls -a
+  zoho: 
+    image: hub-image
+    steps:
+      - ls
+      - echo "World!"
+  test:
     artifacts:
       upload:
-        - type: zip
-          name: test.zip
-          location: stratus://poiuyt/gitpath
-          regex:
-            - /catalyst/src/**/
+        - name: pom.xml
+          type: file
+          location: stratus://mnbvc/gitpath
+          file: pom.xml
     steps:
-      - cat src/test/java/com/houarizegai/calculator/CalculatorUITest.java
-
-  test2:
+      - ls -a
+  approve:
+    type: approval
+    specification:
+      reviewers:
+        -  akshaygokul.gr+pipelinerelease@zohotest.com
+      message: Kindly approve this
+  test1:
     artifacts:
       download:
-        - name: test.zip
+        - name: document.pdf
           type: file
-          location: stratus://poiuyt/gitpath
-          file: /newtest/test.zip
+          location: stratus://mnbvc/gitpath
+          file: /catalyst/
     steps:
-        - ls -a
-        - cd newtest
-        - unzip test.zip
-        - ls -a
-        - cat src/test/java/com/houarizegai/calculator/CalculatorUITest.java
-runners:
-  testrunner:
-    config-id: 1
-pipeline-runner: testrunner
+      - ls -a
+stages:
+  - name: build
+    runner: runner2
+    jobs:
+      - catalyst
+      - test
+      - zoho
+  - name: logs
+    runner: runner2
+    jobs:
+      - approve
+pipeline-runner: runner1
