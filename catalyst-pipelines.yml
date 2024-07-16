@@ -24,7 +24,7 @@ jobs:
       upload:
         - name: pom.xml
           type: file
-          location: stratus://poiuyt/gitpath
+          location: stratus://mnbvc/gitpath
           file: pom.xml
     steps:
       - ls -a
@@ -39,7 +39,7 @@ jobs:
       download:
         - name: document.pdf
           type: file
-          location: stratus://poiuyt/gitpath
+          location: stratus://mnbvc/gitpath
           file: /catalyst/
     steps:
       - ls -a
