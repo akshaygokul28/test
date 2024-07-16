@@ -10,7 +10,7 @@ jobs:
       upload:
         - type: zip
           name: test.zip
-          location: stratus://pipelinerelease/gitpath
+          location: stratus://poiuyt/gitpath
           regex:
             - /catalyst/src/**/
     steps:
@@ -21,7 +21,7 @@ jobs:
       download:
         - name: test.zip
           type: file
-          location: stratus://pipelinerelease/gitpath
+          location: stratus://poiuyt/gitpath
           file: /newtest/test.zip
     steps:
         - ls -a
