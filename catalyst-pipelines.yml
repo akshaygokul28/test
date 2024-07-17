@@ -11,7 +11,7 @@ images:
       username: akshay28082001 
       password: Groot@9952
 jobs:
-  catalyst: 
+  catalyst:
     steps:
       - ls -a
   zoho: 
