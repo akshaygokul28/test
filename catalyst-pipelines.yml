@@ -7,11 +7,11 @@ runners:
 images:  
   hub-image:
     image: ollama/ollama
-    auth:
-      username: akshay28082001
+    auth: 
+      username: akshay28082001 
       password: Groot@9952
 jobs:
-  catalyst: 
+  catalyst:
     steps:
       - ls -a
   zoho: 
@@ -24,7 +24,7 @@ jobs:
       upload:
         - name: pom.xml
           type: file
-          location: stratus://mnbvc/gitpath
+          location: stratus://asdfgg/gitpath
           file: pom.xml
     steps:
       - ls -a
@@ -39,7 +39,7 @@ jobs:
       download:
         - name: document.pdf
           type: file
-          location: stratus://mnbvc/gitpath
+          location: stratus://asdfgg/gitpath
           file: /catalyst/
     steps:
       - ls -a
