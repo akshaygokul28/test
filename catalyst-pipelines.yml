@@ -7,7 +7,7 @@ runners:
 images:  
   hub-image:
     image: ollama/ollama
-    auth: 
+    auth:
       username: akshay28082001
       password: Groot@9952
 jobs:
