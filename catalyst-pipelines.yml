@@ -42,6 +42,7 @@ jobs:
           location: stratus://cvbnmz/gitpath
           file: /docs/document.pdf
     steps:
+      - cd docs  
       - ls -a
 
   test2:
