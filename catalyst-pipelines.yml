@@ -40,7 +40,7 @@ jobs:
         - name: document.pdf
           type: file
           location: stratus://cvbnmz/gitpath
-          file: /docs
+          file: /docs/document.pdf
     steps:
       - ls -a
 
