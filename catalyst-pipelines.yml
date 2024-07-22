@@ -43,12 +43,26 @@ jobs:
           file: /catalyst/
     steps:
       - ls -a
+
+  test2:
+    artifacts:
+      upload:
+        - type: zip
+          name: test.zip
+          location: stratus://cvbnmz/
+          regex: 
+            - /catalyst/src/**/
+    steps:
+      - pwd
+
 stages:
   - name: build
     runner: runner2
     jobs:
       - catalyst
       - test
+      - test1
+      - test2
       - zoho
   - name: logs
     runner: runner2
