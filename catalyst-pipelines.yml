@@ -40,8 +40,9 @@ jobs:
         - name: document.pdf
           type: file
           location: stratus://cvbnmz/gitpath
-          file: /catalyst/
+          file: /docs
     steps:
+      - cd docs
       - ls -a
 
   test2:
