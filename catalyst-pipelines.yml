@@ -13,7 +13,7 @@ images:
 jobs:
   catalyst:
     steps:
-      - ls
+      - ls -a
   zoho: 
     image: hub-image
     steps:
