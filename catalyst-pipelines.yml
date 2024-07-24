@@ -10,7 +10,7 @@ images:
     auth:
       username: akshay28082001
       password: Groot@9952
-jobs:
+jobs: 
   catalyst:
     steps:
       - ls -a
