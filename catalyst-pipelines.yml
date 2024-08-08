@@ -65,8 +65,8 @@ stages:
     #   - test1
     #   - test2
       - zoho
-  - name: logs
-    runner: runner2
-    jobs:
-      - approve
+#   - name: logs
+#     runner: runner2
+#     jobs:
+#       - approve
 pipeline-runner: runner1
