@@ -9,7 +9,7 @@ images:
     image: ollama/ollama
     auth:
       username: akshay28082001
-      password: Groot@9952
+      password: Groot@9952 
 jobs: 
   catalyst:
     steps:
