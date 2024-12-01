@@ -32,7 +32,7 @@ jobs:
     type: approval
     specification:
       reviewers:
-        -  akshaygokul.gr+pipelinerelease@zohotest.com
+        -  akshaygokul.gr@zohocorp.com
       message: Kindly approve this
   test1:
     artifacts:
@@ -61,12 +61,12 @@ stages:
     runner: runner2
     jobs:
       - catalyst
-    #   - test
-    #   - test1
-    #   - test2
+      - test
+      - test1
+      - test2
       - zoho
-#   - name: logs
-#     runner: runner2
-#     jobs:
-#       - approve
+  - name: logs
+    runner: runner2
+    jobs:
+      - approve
 pipeline-runner: runner1
