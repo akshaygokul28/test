@@ -50,7 +50,7 @@ jobs:
       upload:
         - type: zip
           name: test.zip
-          location: stratus://cvbnmz/
+          location: stratus://cvbnmzz/
           regex: 
             - /catalyst/src/**/
     steps:
