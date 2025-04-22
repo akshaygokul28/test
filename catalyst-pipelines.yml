@@ -33,7 +33,7 @@ jobs:
     type: approval
     specification:
       reviewers:
-        -  akshaygokul.gr+au@zohotest.com
+        -  akshaygokul.gr+pipeline@zohotest.com
       message: Kindly approve this
   test1:
     artifacts:
@@ -44,7 +44,7 @@ jobs:
           file: /docs/document.pdf
     steps:
       - cd docs  
-      - ls -a
+      - ls 
 
   test2:
     artifacts:
