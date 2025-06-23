@@ -19,7 +19,7 @@ jobs:
     image: hub-image
     steps:
       - ls
-      - echo "World!"
+      - echo "World!!"
   test:
     artifacts:
       upload:
@@ -33,7 +33,7 @@ jobs:
     type: approval
     specification:
       reviewers:
-        -  akshaygokul.gr+pipeline@zohotest.com
+        -  akshaygokul.gr+sdkautomation@zohotest.com
       message: Kindly approve this
   test1:
     artifacts:
